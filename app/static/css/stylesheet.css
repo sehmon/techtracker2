@@ -1,0 +1,169 @@
+/* CSS */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*----------Start of Custom CSS-----------*/
+
+body {
+	background-image: url(http://mycolorscreen.com/wp-content/uploads/wallpapers_2012/315590/IMG_20140130_184346.jpg);
+	font-family: 'Roboto', sans-serif;
+}
+
+.header {
+	background-color: white;
+	padding: 10px 20px;
+}
+
+.header a {
+	font-size: 36px;
+	text-decoration: none;
+	color: black;
+}
+
+.submissionbox {
+	background-color: white;
+	width: 66%;
+	margin: 90px auto;
+	padding: 20px;
+	border-radius: 10px;
+}
+
+
+.submissionbox h3 {
+	font-size: 18px;
+	font-family: 'Verdana';
+	display: inline;
+}
+
+.submissionbox button {
+	background-color: #A6FFA6;
+	border: none;
+	text-align: right;
+	font-size: 18px;
+	margin: 3px;
+	float: right;
+	height: 30px;
+}
+
+.submissionbox button:hover {
+	background-color: #4DFF4D;
+}
+
+.submissionbox hr {
+	width: 100%;
+	clear: both;
+}
+
+form * {
+	display: block;
+	font-size: 18px;
+	padding: 10px 0;
+	margin: 10px;
+}
+
+form input {
+	padding: 3px;
+}
+
+form textarea {
+	width:100%;
+	height:100%; 
+	padding: 2px;
+	resize: none;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;    
+	-webkit-box-sizing: border-box;
+}
+
+input[type=radio] {
+    display:none; 
+    margin:10px;
+}
+
+input[type=radio] + label {
+    display:inline-block;
+    margin:10px -2px 0px -2px;
+    padding: 4px 12px;
+    background-color: #e7e7e7;
+    border-color: #ddd;
+}
+
+input[type=radio]:checked + label { 
+   background-image: none;
+    background-color:#99D6D6;
+}
+
+.submit {
+	width: 50%;
+	font-size: 40px;
+	background-color: white;
+	text-decoration: none;
+	text-align: center;
+	margin: 150px auto 20px auto;
+	padding: 20px 10px;
+	display: block;
+	color: green;
+	border-radius: 10px;
+}
+
+.view {
+	width: 50%;
+	font-size: 40px;
+	background-color: white;
+	text-decoration: none;
+	text-align: center;
+	margin: 100px auto 20px auto;
+	padding: 20px 10px;
+	display: block;
+	color: orange;
+	border-radius: 10px;
+}
+
+
