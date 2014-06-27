@@ -16,7 +16,7 @@ def submit():
             flash('Please fill out the missing forms')
             return render_template('submit.html', form = form)
         else:
-            return redirect(url_for('home'))
+            return render_template('submit.html', success = True)
 
     elif request.method == 'GET':
         return render_template('submit.html', form = form)

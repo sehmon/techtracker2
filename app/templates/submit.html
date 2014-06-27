@@ -1,7 +1,11 @@
 		
 {% extends "base.html" %}
 {% block content %}
+
 <div class="submissionbox">
+{% if success %}
+<h1 class="successtext">Thanks, your Job will be reviewed shortly</h1>
+{% else %}
 	<h3>Get help fast!</h3>
 	<hr>
 
@@ -26,4 +30,5 @@
         {{form.submit}}
     </form>
 </div>
+{% endif %}
 {% endblock %}
