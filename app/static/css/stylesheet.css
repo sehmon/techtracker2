@@ -166,4 +166,8 @@ input[type=radio]:checked + label {
 	border-radius: 10px;
 }
 
-
+.flash {
+    background-color: #FBB0B0;
+    padding: 10px;
+    width: 50%;
+}

@@ -3,26 +3,27 @@
 {% block content %}
 <div class="submissionbox">
 	<h3>Get help fast!</h3>
-	<button id="datapushbutton" onClick="submit()">Submit</button>
 	<hr>
 
-	<form>
-		<input type="radio" id="radio1" name="radios" value="mhs" checked>
-		   <label for="radio1">MHS</label>
-		<input type="radio" id="radio2" name="radios" value="ait">
-		   <label for="radio2">AIT</label>
-		<input type="radio" id="radio3" name="radios" value="apa">
-     	   <label for="radio3">APA</label> 
-		<input type="radio" id="radio4" name="radios" value="uctech">
-		   <label for="radio4">UCTECH</label>
-		<input type="radio" id="radio5" name="radios" value="aahs">
-		   <label for="radio5">AAHS</label>
+    <form action="{{url_for('submit') }}" method=post>
+        
+        {% for message in form.name.errors %}
+        <p class="flash">{{message}}</p>
+        {% endfor %}
 
-		<label for="name">Full Name</label>
-		<input type="text" name="name" id="name">
+        {% for message in form.desc.errors %}
+        <p class="flash">{{message}}</p>
+        {% endfor %} 
 
-		<label for="explaination">Explain what's going on</label>
-		<textarea rows="7" cols="10" name="explaination" id="explaination"></textarea>
-	</form>
+	    {{ form.hidden_tag() }}
+
+        {{form.name.label}}
+        {{form.name}}
+
+        {{form.desc.label}}
+        {{form.desc}}
+
+        {{form.submit}}
+    </form>
 </div>
 {% endblock %}
