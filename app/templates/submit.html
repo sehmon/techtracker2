@@ -4,7 +4,7 @@
 
 <div class="submissionbox">
 {% if success %}
-<h1 class="successtext">Thanks, your Job will be reviewed shortly</h1>
+<h1 class="successtext">Thanks{{name}}, your Job will be reviewed shortly</h1>
 {% else %}
 	<h3>Get help fast!</h3>
 	<hr>
@@ -25,7 +25,7 @@
         {{form.name}}
 
         {{form.desc.label}}
-        {{form.desc}}
+        {{form.desc(rows=7, cols=10)}}
 
         {{form.submit}}
     </form>

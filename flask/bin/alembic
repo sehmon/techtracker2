@@ -1,0 +1,9 @@
+#!/home/sehmon/development/repos/techtracker2/flask/bin/python
+# EASY-INSTALL-ENTRY-SCRIPT: 'alembic==0.6.5','console_scripts','alembic'
+__requires__ = 'alembic==0.6.5'
+import sys
+from pkg_resources import load_entry_point
+
+sys.exit(
+   load_entry_point('alembic==0.6.5', 'console_scripts', 'alembic')()
+)
