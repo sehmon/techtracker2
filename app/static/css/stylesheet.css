@@ -65,11 +65,12 @@ body {
 	font-size: 36px;
 	text-decoration: none;
 	color: black;
+    padding: 3px;
 }
 
 .submissionbox {
 	background-color: white;
-	width: 66%;
+	width: 75%;
 	margin: 90px auto;
 	padding: 20px;
 	border-radius: 10px;
@@ -77,7 +78,7 @@ body {
 
 
 .submissionbox h3 {
-	font-size: 18px;
+	font-size: 24px;
 	font-family: 'Verdana';
 	display: inline;
 }
@@ -149,7 +150,7 @@ input[type=radio]:checked + label {
 	margin: 150px auto 20px auto;
 	padding: 20px 10px;
 	display: block;
-	color: green;
+	color: #2ECC71;
 	border-radius: 10px;
 }
 
@@ -162,7 +163,7 @@ input[type=radio]:checked + label {
 	margin: 100px auto 20px auto;
 	padding: 20px 10px;
 	display: block;
-	color: orange;
+	color: #22313F;
 	border-radius: 10px;
 }
 
@@ -170,6 +171,17 @@ input[type=radio]:checked + label {
     background-color: #FBB0B0;
     padding: 10px;
     width: 50%;
+}
+
+.submitbutton {
+    border: none;
+    color: black;
+    border-radius: 3px;
+    padding: 5px 10px;
+}
+
+.submitbutton:hover {
+    color: #629632;
 }
 
 .successtext {
@@ -182,9 +194,11 @@ input[type=radio]:checked + label {
 }
 
 .currentjobtitle {
-    font-size: 24px;
+    font-size: 28px;
     text-align: center;
     padding: 5px;
+    margin-bottom: 10px;
+    color: #22313F;
 }
 
 .jobtable {
@@ -203,8 +217,14 @@ input[type=radio]:checked + label {
 
 .viewtableheader {
     border-bottom: 1px solid black;
-
 }
+
+.viewtableheader th {
+    font-size: 20px;
+    background-color: grey;
+    color: white;
+}
+
 .jobtablerow {
     border-bottom: 1px solid grey;
 }
@@ -212,6 +232,11 @@ input[type=radio]:checked + label {
 .jobtablerow:hover {
    background-color: #629632;
    color: white;
+}
+
+.jobtablerow td {
+    text-align: center;
+
 }
 
 .nojobstext {

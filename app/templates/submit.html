@@ -22,12 +22,12 @@
 	    {{ form.hidden_tag() }}
 
         {{form.name.label}}
-        {{form.name}}
+        {{form.name(placeholder="First Last")}}
 
         {{form.desc.label}}
         {{form.desc(rows=7, cols=10)}}
 
-        {{form.submit}}
+        {{form.submit(class="submitbutton")}}
     </form>
 </div>
 {% endif %}

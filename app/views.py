@@ -2,6 +2,7 @@ from flask import render_template, request, flash, redirect, url_for, session
 from forms import JobForm
 from app import app, db
 from models import Job
+from datetime import datetime
 
 @app.route('/')
 @app.route('/home')
@@ -17,7 +18,8 @@ def submit():
             flash('Please fill out the missing forms')
             return render_template('submit.html', form = form)
         else:
-            job = Job(name=form.name.data, desc=form.desc.data)
+            job = Job(name=form.name.data, desc=form.desc.data, date=datetime.now())
+            print job.date
             db.session.add(job)
             db.session.commit()
             return render_template('submit.html', success = True, name = " " + job.name)
