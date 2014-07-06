@@ -70,10 +70,11 @@ body {
 
 .submissionbox {
 	background-color: white;
-	width: 75%;
-	margin: 90px auto;
+	width: 85%;
+	margin: 70px auto;
 	padding: 20px;
 	border-radius: 10px;
+    overflow: hidden;
 }
 
 
@@ -203,14 +204,12 @@ input[type=radio]:checked + label {
 
 .jobtable {
     border-collapse: collapse;
-    /* border: 1px solid black; */
     width: 100%;
     table-layout: fixed;
 }
 
 .jobtable * {
     padding: 10px;
-    max-width: 33%;
     overflow: hidden;
     text-overflow: ellpisis;
 }
@@ -229,14 +228,14 @@ input[type=radio]:checked + label {
     border-bottom: 1px solid grey;
 }
 
-.jobtablerow:hover {
-   background-color: #629632;
-   color: white;
-}
-
 .jobtablerow td {
     text-align: center;
+    vertical-align: middle;
 
+}
+
+.jobtablerow:nth-child(odd){
+    background-color: #CEE3F6;
 }
 
 .nojobstext {
@@ -244,4 +243,29 @@ input[type=radio]:checked + label {
     font-size: 20px;
     padding: 5px;
     color: #629632;
+}
+
+.jobscount {
+    color: #2ECC71;
+    display: inline;
+}
+
+.descheader {
+    font-size: 20px;
+    padding: 20px;
+}
+
+.desctext {
+    color: #22313F;
+    font-size: 20px;
+}
+
+.leftcolumn {
+    width: 50%;
+    float: left;
+}
+
+.rightcolumn {
+    width: 50%;
+    float: right;
 }

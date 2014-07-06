@@ -29,5 +29,14 @@ def submit():
 
 @app.route('/view')
 def view():
-    jobs = Job.query.all()
-    return render_template('view.html',jobs = jobs) 
+    today = datetime.now()
+    jobs = Job.query.order_by(Job.date.desc())
+    return render_template('view.html',jobs = jobs, today=today)
+
+@app.route('/details/<id>')
+def details(id):
+    job = Job.query.get(id)
+    if job:
+        return render_template('details.html', job=job)
+    else:
+        return("Job doesn't exist")

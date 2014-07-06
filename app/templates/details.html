@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="submissionbox">
+        <h1>Detail View</h1>
+        <hr>
+        <div class="leftcolumn">
+            <p class="descheader">Name: <span class="desctext">{{job.name}}</span></p>
+            <p class="descheader">Description: <span class="desctext">{{job.desc}}</span></p>
+            <p class="descheader">Date: <span  class="desctext">{{job.date}}</span></p>
+        </div>
+        <div class="rightcolumn">
+            <p class="descheader">Status: <span class="desctext">{{job.completed}}</span></p>
+            <p class="descheader">Type: <span class="desctext">{{job.type}}</span></p>
+        </div>
+    </div>
+{% endblock %}

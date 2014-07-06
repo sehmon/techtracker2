@@ -2,20 +2,25 @@
 {% block content %}
 
 <div class="submissionbox">
-   <h2 class="currentjobtitle">Current Jobs</h2>
-    
+    <h2 class="currentjobtitle">Jobs  <span class="jobscount">{{jobs.count()}}</span></h2>
    {% if jobs %}
    <table class="jobtable">
        <thead class="viewtableheader">
-                <th colspan="1">Name</th>
-                <th colspan="4">Description</th>
+                <th colspan="1">ID</th>
+                <th colspan="2">Name</th>
+                <th colspan="8">Description</th>
+                <th colspan="2">Date</th>
                 <th colspan="1">Status</th>
        </thead>
        <tbody>
     {% for job in jobs %}
-        <tr class="jobtablerow">
-            <td colspan="1">{{job.name}}</td>
-            <td colspan="4">{{job.desc}}</td>
+    <tr class="jobtablerow"> 
+            <td colspan="1">{{job.id}}</td>
+            <td colspan="2">{{job.name}}</td>
+            <td colspan="8">
+                <a href="/details/{{job.id}}">{{job.desc}}</a>
+            </td>
+            <td colspan="2">{{job.date.strftime("%d %B %Y")}}</td>
             <td colspan="1">
                 {% if job.completed %}
                 Closed
