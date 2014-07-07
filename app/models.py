@@ -1,6 +1,7 @@
 from app import db, app
 from werkzeug.security import generate_password_hash, check_password_hash
 import flask.ext.whooshalchemy as whooshalchemy
+import flask.ext.restless
 
 class Job(db.Model):
     __searchable__ = ['name', 'desc']
@@ -32,3 +33,7 @@ class User(db.Model):
         return check_password_hash(self.pw_hash, password)
 
 whooshalchemy.whoosh_index(app, Job)
+
+manager = flask.ext.restless.APIManager(app, flask_sqlalchemy_db=db)
+
+manager.create_api(Job, methods=['GET', 'POST', 'DELETE'])

@@ -1,8 +1,9 @@
-from flask import render_template, request, flash, redirect, url_for, session
+from flask import render_template, request, flash, redirect, url_for, session, _request_ctx_stack
 from forms import JobForm
 from app import app, db
 from models import Job
 from datetime import datetime
+from werkzeug import LocalStack, LocalProxy
 
 @app.route('/')
 @app.route('/home')
@@ -40,3 +41,10 @@ def details(id):
         return render_template('details.html', job=job)
     else:
         return("Job doesn't exist")
+
+@app.route('/job_delete/<id>')
+def job_delete(id):
+    print Job.query.get(id)
+    jobs = Job.query.all()
+    return render_template('view.html', deletion=True, jobs=jobs)
+

@@ -269,3 +269,11 @@ input[type=radio]:checked + label {
     width: 50%;
     float: right;
 }
+
+.detaildeletebutton {
+    border: none;
+    color: black;
+    border-radius: 3px;
+    padding: 5px 10px;
+    float: right;
+}
